@@ -2,8 +2,8 @@
   "name": "venezuelabackpackers",
   "version": "1.0.0",
   "engines": {
-    "node": "12.11.1",
-    "npm": "6.4.1"
+    "node": "14.15.4",
+    "npm": "6.14.11"
     },
   "scripts": {
     "ng": "ng",    
