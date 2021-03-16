@@ -1,9 +1,12 @@
 {
+  //"name": "apptourzero",
   "name": "venezuelabackpackers",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",    
-    "start": "node serve.js",    
+    "ng": "ng",
+    //"start": "ng serve",
+    "start": "node serve.js",
+    //"build": "ng build",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
