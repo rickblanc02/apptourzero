@@ -18,7 +18,7 @@ app.use(express.static('./dist/venezuelabackpackers'));
  //   res.sendFile('index.html', {root: 'dist/venezuelabackpackers/'}),
 //);
 app.get('/',function(req,res){
-    res.sendFile(path.join(__dirname+'/dist/venezuelabackpackers/src/index.html'));    
+    res.sendFile(path.join(__dirname+'/dist/venezuelabackpackers/index.html'));    
 });
 
 app.listen(process.env.PORT || 8080);
