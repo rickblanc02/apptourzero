@@ -1,14 +1,8 @@
 const express = require('express');
-
+const path = require('path');
 const app = express();
-
-app.use(express.static('./dist/venezuelabackpackers'));
-
-app.get('/*', function (req, res) {
-  res.sendFile('index.html', { root: 'dist/venezuelabackpackers' }
-  );
-});
-
+app.use(express.static(__dirname + '/dist/venezuelabackpackers'));
+app.get('/*', function(req,res) {
+  res.sendFile(path.join(__dirname+
+    '/dist/venezuelabackpackers/index.html'));});
 app.listen(process.env.PORT || 8080);
-
-console.log(`Running on port ${process.env.PORT || 8080}`)
