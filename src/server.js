@@ -15,7 +15,7 @@ app.use(requireHTTPS);
 app.use(express.static('./dist/venezuelabackpackers'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/venezuelabackpackers/'}),
+    res.sendFile('index.html', {root: 'dist/venezuelabackpackers/src/'}),
 );
 /*app.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/dist/venezuelabackpackers/index.html'));    
