@@ -14,17 +14,17 @@ app.use(requireHTTPS);
 
 app.use(express.static('./dist/venezuelabackpackers'));
 
-/*app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/venezuelabackpackers/src/'}),
-);*/
+app.get('/*', (req, res) =>
+    res.sendFile('index.html', {root: 'dist/venezuelabackpackers/'}),
+);
 /*app.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/dist/venezuelabackpackers/index.html'));    
 });*/
 
-app.get('/*', function(req,res){
+/*app.get('/*', function(req,res){
     const fullPath = path.join(__dirname + '/dist/venezuelabackpackers/index.html');
     console.log(" Fetching from.." + fullPath);
       res.sendFile(fullPath);
-  })
+  })*/
 
 app.listen(process.env.PORT || 8080);
