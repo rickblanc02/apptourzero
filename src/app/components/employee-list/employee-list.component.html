@@ -1,0 +1,54 @@
+
+ <div *ngIf="1 == 1" > 
+  <ngb-alert [dismissible]="true" type = "{{type}}">
+    <strong>Atencion!</strong> {{message}}.
+  </ngb-alert>
+</div>
+
+  <a mat-raised-button color="primary" routerLink="../create-employee"  class="nav-link" >Add Employee</a>
+
+<h2>Employee List</h2>
+
+
+<!-- version boostrap -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Id</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.firstName}}</td>
+            <td>{{employee.lastName}}</td>
+            <td>{{employee.emailId}}</td>
+            <td>
+                <button (click) = "updateEmployee(employee.id)" class = "btn btn-info">Update</button>
+                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+
+        </tr>
+    </tbody>
+
+</table>
+
+
+<!--
+<div *ngIf="1 == 1" class="alert alert-primary alert-dismissible fade show" role="alert">
+    This is a primary alert—check it out!
+    </div>
+
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  -->
+
+

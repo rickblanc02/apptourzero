@@ -1,0 +1,58 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Login Tuten Api Rest</h3>
+    
+    <form  (ngSubmit)="onSubmit()" [formGroup]="form" >
+    
+        <div class="form-group">
+           
+            <mat-form-field>
+            <input matInput placeholder="app" type="text" class="form-control" id="app" formControlName="app"  
+            [(ngModel)]="user.app" name= "app">
+           
+            </mat-form-field>
+           
+            
+        </div>
+
+        <div class="form-group">
+           
+            <mat-form-field>
+            <input matInput placeholder="user" type="text" class="form-control" id="user" formControlName="user"  
+            [(ngModel)]="user.user" name= "user">
+           
+            </mat-form-field>
+           
+            
+        </div>
+
+        <div class="form-group">
+           
+            <mat-form-field>
+            <input matInput placeholder="pass" type="text" class="form-control" id="pass" formControlName="pass"  
+            [(ngModel)]="user.pass" name= "pass">
+           
+            </mat-form-field>
+           
+            
+        </div>
+    
+        <button class="btn btn-success" type="submit">Login</button>
+        <button (click) = "back()" class = "btn btn-info">Back</button>
+       
+    </form>
+
+<div *ngIf="result()">
+    <h3> Result</h3>
+
+    <div>
+        <label> <b> User: </b></label> {{user.user}}
+    </div>
+    <div>
+        <label> <b> App: </b></label> {{user.app}}
+    </div>
+    
+   
+</div>
+
+    </div>
+    
