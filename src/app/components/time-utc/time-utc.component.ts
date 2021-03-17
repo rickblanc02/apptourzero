@@ -14,6 +14,8 @@ export class TimeUtcComponent implements OnInit {
   time = new Time();
   //resultado!: Object;
   resultado!:number;
+  timeResult!:string;
+  timeResult2!:string;
 
   
   constructor(
@@ -47,8 +49,10 @@ export class TimeUtcComponent implements OnInit {
       console.log(data);
       //this.resultado = data;
       //this.goToEmployeeList();
-      this.time = data;
+      //this.time = data;
       this.resultado = 1;
+      this.timeResult = data.time;
+      this.timeResult2 = data.timeZone;
       
      
     },

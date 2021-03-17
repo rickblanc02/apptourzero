@@ -11,8 +11,8 @@ export class TimeService {
   constructor(private httpClient: HttpClient) { }
 
   //https://app-tours.herokuapp.com/
-  //private baseUrl = "http://localhost:8080/api/v1/";
-  private baseUrl = "https://app-tours.herokuapp.com/api/v1/";
+  private baseUrl = "http://localhost:8080/api/v1/";
+  //private baseUrl = "https://app-tours.herokuapp.com/api/v1/";
 
   //return objet time
   getTime(time: Time): Observable<Time>{
