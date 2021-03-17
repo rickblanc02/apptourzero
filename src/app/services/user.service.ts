@@ -34,9 +34,25 @@ export class UserService {
     //return this.httpClient.put<User>(this.baseUrl+user.user+"", opciones);
   }
 
-  getBooking(contact: Contact): Observable<Contact>{
+  
+  getBooking(contact: Contact): Observable<Contact[]>{
+
+    /*this.contact.current = true;
+    this.contact.adminemail = "testapis@tuten.cl";
+    this.contact.email = "contacto@tuten.cl";
+    this.contact.app = "APP_BCK";
+    this.contact.token = this.token;*/
+
+    const opciones = {
+      headers: new HttpHeaders({
+        'adminemail':contact.adminemail,
+        'token': contact.token,
+        'app': contact.app
+      }),
+      //params: parametros
+    };
     
-    return this.httpClient.get<Contact>(this.baseUrl+contact.email+"/bookings?current="+contact.current);
+    return this.httpClient.get<Contact[]>(this.baseUrl+contact.email+"/bookings?current="+contact.current, opciones);
   }
 
 }

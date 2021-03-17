@@ -50,9 +50,39 @@
     <div>
         <label> <b> App: </b></label> {{user.app}}
     </div>
+  
+    <!-- version boostrap -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+           
+            <th>BookingId</th>
+            <th>Client</th>
+            <th>Fecha de Creación</th>
+            <th>Direccion</th>
+            <th>Precio</th>
+            
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let contact of contacts">
+           
+            <td>{{contact.bookingId }}</td>
+            <td>{{contact.tutenUserClient.firstName}} {{contact.tutenUserClient.lastName}}</td>
+            <td>{{contact.bookingTime}}</td>
+            <td>{{contact.locationId.streetAddress}}</td>
+            <td>{{contact.bookingPrice}}</td>
+           
+
+        </tr>
+    </tbody>
+
+</table>
+
     
    
 </div>
 
-    </div>
+</div>
     
